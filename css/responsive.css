@@ -1,0 +1,25 @@
+@media (max-width: 767px){
+	.box-item-header{
+		margin-bottom: 15px;
+	}
+	.logo-img{
+		margin-top: 0px;
+	}
+
+}
+@media (min-width: 768px) {
+	.carousel-indicators{
+		bottom: 0px;
+	}
+}
+@media (min-width: 768px) and (max-width: 999px){
+	
+}
+@media (min-width: 1000px) {
+	.slider_customer .item{
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1200px){
+	
+}
