@@ -56,25 +56,23 @@ class IndexController extends Controller {
 	public function index()
 	{
 		
-		$news = DB::table('news')->where('status',1)->where('noibat',1)->where('com','cong-trinh')->take(12)->orderBy('id','desc')->get();
+		$design = DB::table('news')->where('status',1)->where('com','thiet-ke')->take(8)->orderBy('id','desc')->get();
+		$news = DB::table('news')->where('status',1)->where('com','tin-tuc')->take(4)->orderBy('id','desc')->get();
 		$products = DB::table('products')->where('status',1)->take(20)->orderBy('id','desc')->get();
 		$categories_home = DB::table('product_categories')->where('status',1)->where('noibat',1)->orderBy('stt','asc')->get();
 		$feedbacks = DB::table('feedback')->get();
 		$partners = DB::table('partner')->get();
 		$setting =DB::table('setting')->select()->where('id',1)->get()->first();
 		$about = DB::table('about')->where('com','gioi-thieu')->first();
+		$slogans = DB::table('slogan')->get();
 		$title = $setting->title;
 		$keyword = $setting->keyword;
 		$description = $setting->description;	
-		$cate_pro = DB::table('product_categories')
-			->where('status',1)
-			->where('parent_id',0)
-			->where('com','san-pham')
-			->orderby('stt','asc')->get();	
+		$video = DB::table('video')->first();
 		$com = 'index';
 		// End cấu hình SEO
 		$img_share = asset('upload/hinhanh/'.$setting->photo);
-		return view('templates.index_tpl', compact('com','keyword','description','title','img_share','partners','products','categories_home','feedbacks','news','about','cate_pro','cateNews'));
+		return view('templates.index_tpl', compact('com','keyword','description','title','img_share','partners','products','categories_home','feedbacks','design','about','news','cateNews','slogans','video'));
 	}
 	public function getProduct(Request $req)
 	{

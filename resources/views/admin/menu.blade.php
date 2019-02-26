@@ -38,7 +38,7 @@
             </li>
             <li class=""><a href="backend/news?type=tin-tuc"><i class="fa fa-circle-o"></i> <span>Tin tức</span></a></li>  
              
-            <!-- <li><a href="backend/video"><i class="fa fa-circle-o"></i> <span>Quản lý video</span></a></li> -->
+            <li><a href="backend/video"><i class="fa fa-circle-o"></i> <span>Quản lý video</span></a></li>
             <!-- <li><a href="backend/lienket?type=lien-ket"><i class="fa fa-gear" aria-hidden="true"></i> <span>Quản lý liên kết</span></a></li> -->
             <!-- <li><a href="backend/partner"><i class="fa fa-circle-o"></i> <span>Thành viên công ty</span></a></li> -->
             <li><a href="backend/slogan"><i class="fa fa-gear" aria-hidden="true"></i> <span>Slogan</span></a></li>

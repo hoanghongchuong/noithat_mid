@@ -424,3 +424,7 @@ footer .row{
 	border-bottom: 1px solid #E5E5E5;
 	padding-bottom: 3px;
 }
+
+.box-video iframe{
+	width: 100%;
+}

@@ -30,8 +30,8 @@
                 <!-- <th style="width: 20px;"><input type="checkbox" name="chonhet" class="minimal" id="chonhet" /></th> -->
                 <th class="text-center with_dieuhuong">Stt</th>
                 <th>Tên</th>
-                <th>Mã</th>
-                <th>Mô tả</th>
+                <th>Mã nhúng</th>
+                <!-- <th>Mô tả</th> -->
                 <!-- <th class="text-center with_dieuhuong">Hoạt động</th> -->
                 <th class="text-center with_dieuhuong">Sửa</th>
                 <th class="text-center with_dieuhuong">Xóa</th>
@@ -43,8 +43,8 @@
                
                 <td class="text-center with_dieuhuong">{{$key+1}}</td>
                 <td>{!! $item->name !!}</td>
-                <td>{!! $item->code !!}</td>
-                <td>{!! $item->mota !!}</td>
+                <td>{!! $item->link !!}</td>
+                <!-- <td>{!! $item->mota !!}</td> -->
                 <!-- <td></td> -->
                 <td class="text-center with_dieuhuong">
                   <i class="fa fa-pencil fa-fw"></i><a href="{{asset('backend/video/edit/'.$item->id)}}">Edit</a>

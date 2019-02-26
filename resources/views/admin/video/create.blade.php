@@ -47,13 +47,13 @@
 								      	<input type="text" name="name" class="form-control">
 									</div>
 									<div class="form-group">
-								      	<label for="desc">Mã video</label>
-								      	<input type="text" name="code" class="form-control">
+								      	<label for="desc">Mã nhúng video</label>
+								      	<input type="text" name="link" class="form-control">
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 								      	<label for="desc">Mô tả</label>
 								      	<textarea name="mota" class="form-control" rows="5"></textarea>
-									</div>
+									</div> -->
 								
 							</div>
 							<div class="clearfix"></div>
