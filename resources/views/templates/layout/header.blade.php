@@ -82,16 +82,14 @@
     </div>
     <nav class="vk-header__menu-mobile">
         <ul class="vk-menu__mobile collapse" id="menuMobile">
-            <li><a href="#">Trang chủ</a></li>
+            <li><a href="{{url('trang-chu')}}">Trang chủ</a></li>
             <li>
                 <a href="#">Thiết kế</a>
                 <a href="#menu2" data-toggle="collapse" class="_arrow-mobile"><i class="_icon fa fa-angle-down"></i></a>
                 <ul class="collapse" id="menu2">
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
+                    @foreach($cateDeSign as $cateD)
+                    <li><a href="{{url('thiet-ke/'.$cateD->alias)}}">{{$cateD->name}}</a></li>
+                    @endforeach
                     
                 </ul>
             </li>
@@ -99,17 +97,14 @@
                 <a href="#">Ảnh công trình</a>
                 <a href="#menu1" data-toggle="collapse" class="_arrow-mobile"><i class="_icon fa fa-angle-down"></i></a>
                 <ul class="collapse" id="menu1">
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
-                    <li><a href="#">Công trình 1</a></li>
+                    @foreach($cateCongTrinh as $ct)
+                    <li><a href="{{url('cong-trinh/'.$ct->alias)}}">{{$ct->name}}</a></li>
+                    @endforeach
                     
                 </ul>
             </li>
-            <li><a href="#">Dự án</a></li>
-            <li><a href="#">Decor</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="{{url('san-pham')}}">Decor</a></li>
+            <li><a href="{{url('lien-he')}}">Liên hệ</a></li>
         </ul>
     </nav>
     

@@ -16,6 +16,20 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <h3>Bài viết liên quan</h3>
+            <div class="owl-carousel owl-carousel-slider owl-theme">
+                @foreach($posts as $post)
+                <div class="item">
+                    <a href="{{url('thiet-ke/'.$post->alias.'.html')}}" title="{{$post->name}}">
+                        <img src="{{asset('upload/news/'.$post->photo)}}" alt="">
+                        <p class="name">{{$post->name}}</p>
+                    </a>
+
+                </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 </div>
 @endsection

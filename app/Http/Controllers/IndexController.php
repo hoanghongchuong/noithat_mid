@@ -397,6 +397,7 @@ class IndexController extends Controller {
 	{
 		$data = DB::table('news')->where('com','thiet-ke')->where('alias',$alias)->first();
 		$albums = DB::table('images')->where('news_id',$data->id)->get();
+		$posts = DB::table('news')->where('cate_id', $data->cate_id)->orderBy('id','desc')->get();
 		if($data->title !=''){
 			$title = $data->title;
 		}else{
@@ -406,7 +407,7 @@ class IndexController extends Controller {
 		$keyword = $data->keyword;
 		$com = 'thiet-ke';
 		$img_share = asset('upload/news/'.$data->photo);
-		return view('templates.detail_design', compact('data','title','keyword','description','com','albums','img_share'));
+		return view('templates.detail_design', compact('data','title','keyword','description','com','albums','img_share','posts'));
 	}
 	
 }
